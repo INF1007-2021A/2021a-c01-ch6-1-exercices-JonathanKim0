@@ -4,15 +4,27 @@
 
 def order(values: list = None) -> list:
     if values is None:
-        # TODO: demander les valeurs ici
-        pass
+        values = input("Entrez 10 valeurs séparées par une virgule").split(",")
+        values.sort()
+        print(values)
 
-    return []
+    return values
 
 
 def anagrams(words: list = None) -> bool:
     if words is None:
-        # TODO: demander les mots ici
+        words = input("Entrez 2 mots").split(",")
+        letter1, letter2 = [], []
+        for word in words[0]:
+            letter1.append(word)
+        for word in words[1]:
+            letter2.append(words[1])
+        if letter2.sort() == letter1.sort():
+            print(True)
+            return True
+        else:
+            print(False)
+            return False
         pass
 
     return False
@@ -56,7 +68,7 @@ def main() -> None:
 
     grades = {"Bob": [90, 65, 20], "Alice": [85, 75, 83]}
     best_student = best_grades(grades)
-    print(f"{list(best_student.keys())[0]} a la meilleure moyenne: {list(best_student.values())[0]}")
+    #print(f"{list(best_student.keys())[0]} a la meilleure moyenne: {list(best_student.values())[0]}")
 
     sentence = "bonjour, je suis une phrase. je suis compose de beaucoup de lettre. oui oui"
     frequence(sentence)
