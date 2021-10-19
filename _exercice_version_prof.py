@@ -26,7 +26,7 @@ def anagrams(words: list = None) -> bool:
 
 
 def contains_doubles(items: list) -> bool:
-
+    print(set(items))
     return len(set(items)) != len(items)
 
 
@@ -81,7 +81,7 @@ def print_recipe(ingredients) -> None:
 
 def main() -> None:
     print(f"On essaie d'ordonner les valeurs...")
-    print(order())
+    #print(order())
 
     print(f"On vérifie les anagrammes...")
     print(anagrams())
